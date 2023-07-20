@@ -1,0 +1,42 @@
+// Init
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+// Variables
+$background: #0e1323;
+$text: #fff;
+$primary: #1c204b;
+$secondary: #5747ea;
+$orange: #ff8b64;
+$blue: #55c2e6;
+$red: #ff5e7d;
+$green: #4bcf82;
+$purple: #7335d2;
+$yellow: #f1c75b;
+
+$font: "Rubik", sans-serif;
+$inspect: solid coral 1px;
+
+// Styles
+body {
+  font-family: $font;
+  background: $background;
+  color: $text;
+}
