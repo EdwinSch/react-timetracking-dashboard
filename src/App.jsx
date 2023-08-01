@@ -1,12 +1,13 @@
-import { useGlobalContext } from "./context.jsx";
+import General from "./components/General.jsx";
+import Datagrid from "./components/Datagrid.jsx";
 
 function App() {
-  console.log(useGlobalContext().data);
-
-  return <p>hoi</p>;
+  return (
+    <main>
+      <General />
+      <Datagrid />
+    </main>
+  );
 }
-
-/* <p>{timeframes[activeIndex].current}</p>
-      <p>{timeframes[activeIndex].previous}</p> */
 
 export default App;
