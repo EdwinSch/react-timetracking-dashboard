@@ -48,29 +48,29 @@ main {
   border: $inspect;
   margin: 24px;
   width: 100vw;
-  max-width: 1100px;
+  max-width: 1120px;
   min-height: 518px;
   // height: 518px;
 
   display: flex;
   gap: 30px;
+}
 
-  // General Info Styles
+// General Info Styles
 
-  .general-container {
-    border: 1px solid lightgreen;
-    width: 255px;
-    height: 518px;
-  }
+.general-container {
+  border: 1px solid lightgreen;
+  min-width: 255px;
+  height: 518px;
+}
 
-  // GRID Styles
+// GRID Styles
 
-  .grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-    gap: 30px;
-  }
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 30px;
 
   .base-tile {
     border: 1px solid lightblue;
