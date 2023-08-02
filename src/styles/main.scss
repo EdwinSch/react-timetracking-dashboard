@@ -30,6 +30,7 @@ $red: #ff5e7d;
 $green: #4bcf82;
 $purple: #7335d2;
 $yellow: #f1c75b;
+$tile-hover: #33397a;
 
 $border-radius: 15px;
 $font: "Rubik", sans-serif;
@@ -52,9 +53,14 @@ main {
   max-width: 1120px;
   min-height: 518px;
   // height: 518px;
-
   display: flex;
   gap: 30px;
+}
+
+.flex-row-utility {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 //--- General Info Styles
@@ -92,22 +98,6 @@ main {
   }
 }
 
-//--- Grid + Tile Styles
-
-.grid-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  gap: 30px;
-
-  .base-tile {
-    border: 1px solid lightblue;
-    height: 244px;
-    // width: 255px;
-    border-radius: $border-radius;
-  }
-}
-
 //--- Tab Button Styles
 .button-container {
   margin: 26px 0 0 32px;
@@ -129,5 +119,110 @@ main {
   }
   .tab-btn:hover {
     color: $text;
+  }
+}
+
+//--- Grid + Tile Styles
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 30px;
+
+  .base-tile {
+    position: relative;
+    height: 244px;
+    // width: 255px;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    figure {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: -5px;
+      right: 16px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .timetrack-container {
+      position: absolute;
+      bottom: 0px;
+      width: 101%;
+      height: 199px;
+      padding: 30px;
+      background: $primary;
+      border-radius: $border-radius;
+      z-index: 2;
+      cursor: pointer;
+      transition: 250ms ease;
+
+      h2 {
+        color: $text;
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+
+      .kebab {
+        cursor: pointer;
+      }
+
+      h3 {
+        margin-top: 25px;
+        color: text;
+        font-size: 3.5rem;
+        font-weight: 300;
+      }
+
+      .previous {
+        color: #bbc0ff;
+        font-size: 0.938rem;
+        font-weight: 400;
+      }
+    }
+
+    .timetrack-container:hover {
+      background: $tile-hover;
+    }
+  }
+
+  // Tile Childs
+  .base-tile:nth-child(1) {
+    background: $orange;
+    figure {
+      background-image: url(../assets/icon-work.svg);
+    }
+  }
+  .base-tile:nth-child(2) {
+    background: $blue;
+    figure {
+      background-image: url(../assets/icon-play.svg);
+    }
+  }
+  .base-tile:nth-child(3) {
+    background: $red;
+    figure {
+      background-image: url(../assets/icon-study.svg);
+    }
+  }
+  .base-tile:nth-child(4) {
+    background: $green;
+    figure {
+      background-image: url(../assets/icon-exercise.svg);
+    }
+  }
+  .base-tile:nth-child(5) {
+    background: $purple;
+    figure {
+      background-image: url(../assets/icon-social.svg);
+    }
+  }
+  .base-tile:nth-child(6) {
+    background: $yellow;
+    figure {
+      background-image: url(../assets/icon-self-care.svg);
+    }
   }
 }

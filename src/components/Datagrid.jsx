@@ -1,8 +1,9 @@
+import kebabicon from "../assets/icon-ellipsis.svg";
 import { useGlobalContext } from "../context";
 
 const Datagrid = () => {
   // Deconstruct global context
-  const { data } = useGlobalContext();
+  const { data, currentIndex } = useGlobalContext();
 
   return (
     <section className="grid-container">
@@ -11,9 +12,21 @@ const Datagrid = () => {
         const { title, timeframes } = tile;
 
         return (
-          <div className="base-tile" key={index}>
-            {title}
-          </div>
+          <article className="base-tile" key={index}>
+            <figure className="icon">{/* CSS Dynamic */}</figure>
+            <div className="timetrack-container">
+              {/* inner header */}
+              <div className="flex-row-utility">
+                <h2>{title}</h2>
+                <img src={kebabicon} alt="kebab icon" className="kebab" />
+              </div>
+              {/* dynamic info */}
+              <h3>{timeframes[currentIndex].current}hrs</h3>
+              <p className="previous">
+                Last week - {timeframes[currentIndex].previous}hrs
+              </p>
+            </div>
+          </article>
         );
       })}
     </section>
@@ -21,6 +34,3 @@ const Datagrid = () => {
 };
 
 export default Datagrid;
-
-/* <p>{timeframes[activeIndex].current}</p>
-      <p>{timeframes[activeIndex].previous}</p> */
