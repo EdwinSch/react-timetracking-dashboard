@@ -21,10 +21,12 @@ const Datagrid = () => {
                 <img src={kebabicon} alt="kebab icon" className="kebab" />
               </div>
               {/* dynamic info */}
-              <h3>{timeframes[currentIndex].current}hrs</h3>
-              <p className="previous">
-                Last week - {timeframes[currentIndex].previous}hrs
-              </p>
+              <div className="dynamic-info-wrapper">
+                <h3>{timeframes[currentIndex].current}hrs</h3>
+                <p className="previous">
+                  Last week - {timeframes[currentIndex].previous}hrs
+                </p>
+              </div>
             </div>
           </article>
         );

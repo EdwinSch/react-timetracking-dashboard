@@ -47,14 +47,20 @@ body {
 }
 
 main {
-  border: $inspect;
   margin: 24px;
   width: 100vw;
   max-width: 1120px;
   min-height: 518px;
-  // height: 518px;
   display: flex;
   gap: 30px;
+}
+
+//-- QUERY
+@media only screen and (max-width: 540px) {
+  main {
+    flex-direction: column;
+    margin: 30px 24px 20px 24px;
+  }
 }
 
 .flex-row-utility {
@@ -67,7 +73,7 @@ main {
 
 .general-container {
   min-width: 255px;
-  height: 518px;
+  min-height: 518px;
   border-radius: $border-radius;
   background: $primary;
 
@@ -83,6 +89,7 @@ main {
       border: solid white 3px;
       border-radius: 99%;
     }
+
     p {
       margin-top: 43px;
       color: #bbc0ff;
@@ -94,6 +101,36 @@ main {
       font-size: 2.5rem;
       font-weight: 300;
       text-transform: capitalize;
+    }
+  }
+}
+
+//-- QUERY
+@media only screen and (max-width: 827px) {
+  .general-container {
+    height: 518px;
+  }
+}
+
+//-- QUERY
+@media only screen and (max-width: 540px) {
+  .general-container {
+    min-height: 203px;
+    height: 203px;
+
+    .person {
+      height: 133px;
+      display: flex;
+      align-items: flex-end;
+
+      img {
+        width: 75px;
+        height: 75px;
+        margin-right: 20px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -125,6 +162,15 @@ main {
   }
 }
 
+//-- QUERY
+@media only screen and (max-width: 540px) {
+  .button-container {
+    margin: 26px 32px 0 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 //--- Grid + Tile Styles
 
 .grid-container {
@@ -136,7 +182,7 @@ main {
   .base-tile {
     position: relative;
     height: 244px;
-    // width: 255px;
+    max-width: 350px;
     border-radius: $border-radius;
     overflow: hidden;
 
@@ -226,6 +272,35 @@ main {
     background: $yellow;
     figure {
       background-image: url(../assets/icon-self-care.svg);
+    }
+  }
+}
+
+//-- QUERY
+@media only screen and (max-width: 540px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+
+    .base-tile {
+      height: 160px;
+      max-width: 100%;
+
+      .timetrack-container {
+        height: 122px;
+        padding: 24px;
+
+        .dynamic-info-wrapper {
+          margin-top: 7px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          h3 {
+            margin-top: 0;
+            font-size: 2rem;
+          }
+        }
+      }
     }
   }
 }

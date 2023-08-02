@@ -16,7 +16,6 @@ const TabButtons = () => {
             className={
               currentIndex === index ? "tab-btn btn-active" : "tab-btn"
             }
-            // className="tab-btn"
             type="button"
           >
             {btn}

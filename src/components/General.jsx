@@ -6,10 +6,12 @@ const General = () => {
     <section className="general-container">
       <div className="person">
         <img src={avatar} alt="profile picture" />
-        <p>Report for</p>
-        <h1>
-          jeremy <br /> robson
-        </h1>
+        <header>
+          <p>Report for</p>
+          <h1>
+            jeremy <br /> robson
+          </h1>
+        </header>
       </div>
       <TabButtons />
     </section>
