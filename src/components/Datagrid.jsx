@@ -1,9 +1,23 @@
 import { useGlobalContext } from "../context";
 
 const Datagrid = () => {
-  console.log(useGlobalContext().data);
+  // Deconstruct global context
+  const { data } = useGlobalContext();
 
-  return <p>datagrid</p>;
+  return (
+    <section className="grid-container">
+      {data.map((tile, index) => {
+        // Deconstruct from data
+        const { title, timeframes } = tile;
+
+        return (
+          <div className="base-tile" key={index}>
+            {title}
+          </div>
+        );
+      })}
+    </section>
+  );
 };
 
 export default Datagrid;
