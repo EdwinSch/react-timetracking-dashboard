@@ -35,7 +35,7 @@ $border-radius: 15px;
 $font: "Rubik", sans-serif;
 $inspect: solid coral 1px;
 
-// Main Styles
+//--- Main Styles
 body {
   font-family: $font;
   background: $background;
@@ -57,7 +57,7 @@ main {
   gap: 30px;
 }
 
-// General Info Styles
+//--- General Info Styles
 
 .general-container {
   min-width: 255px;
@@ -92,7 +92,7 @@ main {
   }
 }
 
-// GRID Styles
+//--- Grid + Tile Styles
 
 .grid-container {
   width: 100%;
@@ -105,5 +105,29 @@ main {
     height: 244px;
     // width: 255px;
     border-radius: $border-radius;
+  }
+}
+
+//--- Tab Button Styles
+.button-container {
+  margin: 26px 0 0 32px;
+
+  .tab-btn {
+    margin-bottom: 21px;
+    display: block;
+    width: auto;
+    text-align: start;
+    text-transform: capitalize;
+    color: #7078c9;
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 400;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 250ms ease;
+  }
+  .tab-btn:hover {
+    color: $text;
   }
 }

@@ -1,4 +1,5 @@
 import avatar from "../assets/image-jeremy.png";
+import TabButtons from "./TabButtons.jsx";
 
 const General = () => {
   return (
@@ -10,10 +11,7 @@ const General = () => {
           jeremy <br /> robson
         </h1>
       </div>
-      {/* todo: button component */}
-      <div className="button-container">
-        <button>bla</button>
-      </div>
+      <TabButtons />
     </section>
   );
 };
