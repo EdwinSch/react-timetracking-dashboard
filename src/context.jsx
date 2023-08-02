@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
   //   };
 
   return (
-    <AppContext.Provider value={{ data, currentIndex }}>
+    <AppContext.Provider value={{ data, currentIndex, setCurrentIndex }}>
       {children}
     </AppContext.Provider>
   );
